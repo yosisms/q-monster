@@ -15,13 +15,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return;
     }
 
-    console.log({ commandExists });
-
     exec(commandExists?.command?.toString(), (err, stdout, stderr) => {
         if (err) {
             console.error(`exec error: ${err}`);
             res.status(500).send('An error occurred while running the command.');
             return;
+        }
+        try {
+            const reportFile = stdout.substring(stdout.indexOf('Report:') + 8);
+            console.log({ reportFile });
+            if(!!reportFile) {
+                exec(reportFile, (err) => {
+                    if(err) {
+                        console.log({err});
+                    }
+                })
+                
+            }
+        } catch (err) {
+            console.log({a: err})
         }
         res.status(200).json({ output: stdout });
     });

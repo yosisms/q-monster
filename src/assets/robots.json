@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Robot 1",
-    "description": "Robot 1 description",
-    "command": "echo 'Robot 1 is running!'"
+    "name": "תיוגים",
+    "description": "בודק גוגל אנליטיקס",
+    "command": "robot -T -d ./public/results ./public/GoogleAnalytics.robot"
   },
   {
     "id": 2,

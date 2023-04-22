@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.9.13 on win32)" generated="20230423 00:04:25.892" rpa="false" schemaversion="3">
+<suite id="s1" name="GoogleAnalytics" source="C:\Users\yshem\OneDrive\Desktop\q-monster\q-monster\public\GoogleAnalytics.robot">
+<test id="s1-t1" name="Google" line="4">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://555.co.il/car</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230423 00:04:26.354" level="INFO">Opening browser 'chrome' to base url 'https://555.co.il/car'.</msg>
+<status status="PASS" starttime="20230423 00:04:26.354" endtime="20230423 00:04:47.033"/>
+</kw>
+<status status="PASS" starttime="20230423 00:04:26.353" endtime="20230423 00:04:47.035"/>
+</test>
+<status status="PASS" starttime="20230423 00:04:25.896" endtime="20230423 00:04:47.038"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="GoogleAnalytics">GoogleAnalytics</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -6,6 +6,7 @@ import Logo from '../assets/logo.png';
 import Image from 'next/image';
 
 export default function Home() {
+    const [isLoading, setIsLoading] = useState(false);
     const [output, setOutput] = useState('');
     const robotsList = useMemo(() => robots.map((item) => {
         return {
@@ -19,9 +20,11 @@ export default function Home() {
 
     const runCommand = async () => {
         if(!chosenRobot) return;
+        setIsLoading(true);
         const response = await fetch(`/api/run-command?command=${chosenRobot?.value}`);
         const data = await response.json();
         setOutput(data.output);
+        setIsLoading(false);
     }
 
     const formSubmit = async (e) => {
@@ -57,7 +60,8 @@ export default function Home() {
                 styles={inputStyles}
                 placeholder={'Search'}
             />
-            <button className={'self-center bg-blue-500 text-white p-2 rounded'} type={'submit'}>
+            <button 
+            className={'self-center bg-blue-500 text-white p-2 rounded'} disabled={isLoading} type={'submit'}>
                 Search
             </button>
         </form>
