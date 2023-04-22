@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Robot 1",
+    "description": "Robot 1 description",
+    "command": "echo 'Robot 1 is running!'"
+  },
+  {
+    "id": 2,
+    "name": "Robot 3",
+    "description": "Robot 2 description",
+    "command": "echo 'Robot 2 is running!'"
+  }
+]
