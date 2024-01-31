@@ -3,7 +3,7 @@
     "id": 1,
     "name": "תיוגים",
     "description": "בודק גוגל אנליטיקס",
-    "command": "robot -T -d ./public/results ./public/GoogleAnalytics.robot"
+    "command": "robot -T -d ./public/results ./public/robots/GoogleAnalytics.robot"
   },
   {
     "id": 2,
